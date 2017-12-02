@@ -4,6 +4,6 @@
   <a routerLink="/create" class="nav_item">Create</a>
 </nav>
 <form (ngSubmit)="submit()">
-  <input type="text" placeholder="Task" [(ngModel)]="item.task" name="task">
-  <button class="primary-button">CREATE</button>
+  <input type="text" placeholder="Task description" [(ngModel)]="item.task" name="task">
+  <button class="primary-button" [disabled]="item.task<=0">CREATE</button>
 </form>
