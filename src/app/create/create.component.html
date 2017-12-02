@@ -1,0 +1,9 @@
+<div class="main_title">Create new ToDo Item</div>
+<nav>
+  <a routerLink="/home" class="nav_item">Home</a>
+  <a routerLink="/create" class="nav_item">Create</a>
+</nav>
+<form (ngSubmit)="submit()">
+  <input type="text" placeholder="Task" [(ngModel)]="item.task" name="task">
+  <button class="primary-button">CREATE</button>
+</form>

@@ -1,0 +1,6 @@
+
+<div class="single_item-wrap">
+  <i class="fa icons completed-icon" aria-hidden="true" [class.fa-check-square]="singleItem.completed" [class.fa-square-o]="!singleItem.completed" (click)="toggleCompleted()"></i>
+  <span class="task-text" [class.isCompleted]="singleItem.completed">{{singleItem.task}}</span>
+  <i class="fa fa-trash-o icons trash-icon" aria-hidden="true" (click)="deleteItem()"></i>
+</div>

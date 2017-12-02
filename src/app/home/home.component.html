@@ -1,0 +1,21 @@
+
+<div class="main_title">My ToDo List</div>
+<nav>
+  <a routerLink="/home" class="nav_item">Home</a>
+  <a routerLink="/create" class="nav_item">Create</a>
+</nav>
+<div class="counter-wrap">
+  <span>Items done </span>{{completedCount}}/{{items.length}}
+</div>
+
+<div *ngIf="items.length <= 0" id="no_items">
+  There is nothing to do.
+</div>
+
+<div *ngFor="let item of items; let i = index">
+  <app-single-item
+    (completedToggled)="handleCompletedToggled($event)"
+    (itemDeleted)="handleItemDeleted(i)"
+    [singleItem]="item" class="single_item">
+  </app-single-item>
+</div>

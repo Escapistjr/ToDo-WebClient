@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 50px;
+  font-family: Ubuntu, Roboto, sans-serif;
+  color: #2c3e50;
+}
+
+.main_title {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+nav {
+  margin: 15px 0;
+}
+
+.nav_item {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #34495e;
+  background-color: #ecf0f177;
+  border-radius: 3px;
+  padding: 2px 10px;
+}
+
+.nav_item:hover {
+  background-color: #ecf0f1;
+}
