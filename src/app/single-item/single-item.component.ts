@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { Output } from '@angular/core';
-import { Item } from '../item';
+import { Item, Priority } from '../item';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -12,6 +12,7 @@ import { EventEmitter } from '@angular/core';
 export class SingleItemComponent implements OnInit {
 
   @Input() singleItem: Item;
+  Priority = Priority;
 
   @Output() completedToggled = new EventEmitter();
   @Output() itemDeleted = new EventEmitter();

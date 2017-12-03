@@ -32,3 +32,37 @@ input[type="text"] {
   background-color: #2c3e5041;
   cursor: default;
 }
+
+.container {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #ecf0f177;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  display: none;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover {
+  background-color: #ecf0f1;
+}
+
+.container input:checked {
+  background-color: white;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked {
+  background-color: #2196F3;
+}

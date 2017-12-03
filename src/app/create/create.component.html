@@ -5,5 +5,16 @@
 </nav>
 <form (ngSubmit)="submit()">
   <input type="text" placeholder="Task description" [(ngModel)]="item.task" name="task">
+  <label class="container">LOW
+    <input type="radio" (click)="item.priority = Priority.LOW" name="low">
+  </label>
+  <label class="container">MEDIUM
+    <input type="radio" (click)="item.priority = Priority.MEDIUM" name="medium">
+  </label>
+  <label class="container">HIGH
+    <input type="radio" (click)="item.priority = Priority.HIGH" name="high">
+  </label>
   <button class="primary-button" [disabled]="item.task<=0">CREATE</button>
 </form>
+
+{{Priority[item.priority]}}
