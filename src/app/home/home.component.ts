@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   items: Item[];
   itemCounter: number;
   completedCount: number = 0;
+  sortedItems: Item[];
 
 
   constructor(private todoService: TodoService) { }
@@ -40,6 +41,9 @@ export class HomeComponent implements OnInit {
     this.itemCounter = this.items.length;
 
     items.forEach(element => { if(element.completed) this.completedCount++; });
+
+
+    this.sortedItems = this.items.sort((i1,i2) => i2.priority - i1.priority);
     })
   }
 

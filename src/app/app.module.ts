@@ -10,6 +10,7 @@ import { SingleItemComponent } from './single-item/single-item.component';
 import { TodoService } from './todo.service';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { routes } from './app.routes';
     AppComponent,
     HomeComponent,
     CreateComponent,
-    SingleItemComponent
+    SingleItemComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

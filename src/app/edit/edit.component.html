@@ -1,0 +1,18 @@
+<div class="main_title">Create new ToDo Item</div>
+<nav>
+  <a routerLink="/home" class="nav_item">Home</a>
+  <a routerLink="/create" class="nav_item">Create</a>
+</nav>
+<form (ngSubmit)="updateItem()">
+  <input type="text" placeholder="Task description" [(ngModel)]="updatedItem.task" name="task">
+  <label class="container" [class.checked-low]="updatedItem.priority == Priority.LOW">LOW
+    <input type="radio" (click)="updatedItem.priority = Priority.LOW" name="low">
+  </label>
+  <label class="container" [class.checked-medium]="updatedItem.priority == Priority.MEDIUM">MEDIUM
+    <input type="radio" (click)="updatedItem.priority = Priority.MEDIUM" name="medium">
+  </label>
+  <label class="container" [class.checked-high]="updatedItem.priority == Priority.HIGH">HIGH
+    <input type="radio" (click)="updatedItem.priority = Priority.HIGH" name="high">
+  </label>
+  <button class="primary-button" [disabled]="updatedItem.task<=0">UPDATE</button>
+</form>
